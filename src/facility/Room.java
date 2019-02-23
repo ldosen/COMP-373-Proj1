@@ -1,17 +1,26 @@
 package facility;
 
 public class Room {
-
+    private String roomId;
     private float width;
     private float height;
     private String type;
     private float depth;
 
-    public Room(float width, float height, float depth, String type){
+    public Room(String roomId, float width, float height, float depth, String type){
+        this.roomId = roomId;
         this.width = width;
         this.height = height;
         this.depth = depth;
         this.type = type;
+    }
+
+    public String getRoomId(){
+        return roomId;
+    }
+
+    public void setRoomId(String roomId){
+        this.roomId = roomId;
     }
 
     public float getDepth() {
