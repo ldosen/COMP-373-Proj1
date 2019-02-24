@@ -24,13 +24,13 @@ public class FacilityView {
 
         // create facility without an apartment
         Building building1 = new Building();
-        building.setFacilityId(1001);
+        building1.setFacilityId(1001);
         Address address1 = new Address("7217", "Orchard", null, "Downers Grove", "Illinois", "60516" );
         renterService.addAddress(address1); // necessary due to primary key constraints.
-        building.setAddress(address1);
+        building1.setAddress(address1);
         facilityService.addFacility(building1);
 
         //remove facility two
-
+        facilityService.removeFacility(1001);
     }
 }
