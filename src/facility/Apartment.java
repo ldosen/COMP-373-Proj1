@@ -6,7 +6,7 @@ import renter.Renter;
 
 public class Apartment extends Building {
 
-    private String apartmentId;
+    private int apartmentId;
     private int numberOfRooms;
     private double monthlyRent;
     private List<Renter> tenants = new ArrayList<Renter>();
@@ -15,11 +15,11 @@ public class Apartment extends Building {
 
     public Apartment(){}
 
-    public String getApartmentId(){
+    public int getApartmentId(){
         return apartmentId;
     }
 
-    public void setApartmentId(String apartmentId){
+    public void setApartmentId(int apartmentId){
         this.apartmentId = apartmentId;
     }
 
