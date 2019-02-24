@@ -10,6 +10,15 @@ public class Address {
 
     public Address(){}
 
+    public Address(String addressID, String streetName, String apartmentNumber, String city, String state, String zip){
+        this.addressID = addressID;
+        this.streetName = streetName;
+        this.apartmentNumber = apartmentNumber;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
     public String getAddressID(){
         return addressID;
     }

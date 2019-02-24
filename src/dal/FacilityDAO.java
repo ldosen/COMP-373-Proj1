@@ -17,7 +17,6 @@ public class FacilityDAO {
     public void addFacility(Building building){
         Connection con = DBHelper.getConnection();
         PreparedStatement bldPst = null;
-        PreparedStatement addPst = null;
 
         try{
             String bldStm = "INSERT INTO Building(BuildingID, AddressID) VALUES(?, ?)";
@@ -29,8 +28,7 @@ public class FacilityDAO {
 
         } finally {
             try{
-                if(addPst != null){
-                    addPst.close();
+                if(bldPst != null){
                     bldPst.close();
                 }
                 if(con != null){
