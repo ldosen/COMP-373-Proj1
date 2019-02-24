@@ -3,21 +3,21 @@ package facility;
 import renter.Address;
 
 public class Building {
-    private String buildingId;
+    private int buildingId;
     private Apartment apartmentDetails;
     private Address address;
 
     public Building(){}
 
-    public Building(String buildingId){
+    public Building(int buildingId){
         this.buildingId = buildingId;
     }
 
-    public String getFacilityId() {
+    public int getFacilityId() {
         return buildingId;
     }
 
-    public void setFacilityId(String buildingId) {
+    public void setFacilityId(int buildingId) {
         this.buildingId = buildingId;
     }
 
