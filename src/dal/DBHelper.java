@@ -1,10 +1,6 @@
 package dal;
 
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DBHelper {
 
@@ -30,7 +26,7 @@ public class DBHelper {
 
         try {
 
-            connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/facility", "student", "Comp442");
+            connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/facility", "postgres", "piplo_l0ve");
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery("SELECT VERSION()");
 
