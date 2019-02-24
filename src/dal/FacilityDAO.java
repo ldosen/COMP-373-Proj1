@@ -40,4 +40,17 @@ public class FacilityDAO {
             }
         }
     }
+
+    public void removeFacility(int facilityId){
+        try {
+            Statement st = DBHelper.getConnection().createStatement();
+            String facilityRemovalQuery = "DELETE FROM Building WHERE BuildingId = '" + facilityId + "'";
+            st.execute(facilityRemovalQuery);
+            st.close();
+        } catch ( SQLException e){
+            System.err.println("FacilityDAO: Error removing building");
+            System.err.println(e.getMessage());
+        }
+    }
+
 }
