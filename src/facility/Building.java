@@ -7,6 +7,8 @@ public class Building {
     private Apartment apartmentDetails;
     private Address address;
 
+    public Building(){}
+
     public Building(String buildingId){
         this.buildingId = buildingId;
     }
