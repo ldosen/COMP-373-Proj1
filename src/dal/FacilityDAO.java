@@ -42,6 +42,17 @@ public class FacilityDAO {
     }
 
     public void removeFacility(int facilityId){
+        // remove Apartments with this BuildingID due to FK constraints.
+        try {
+            Statement st = DBHelper.getConnection().createStatement();
+            String apartmentRemovalQuery = "DELETE FROM Apartment WHERE BuildingId = '" + facilityId + "'";
+            st.execute(apartmentRemovalQuery);
+            st.close();
+        } catch ( SQLException e){
+            System.err.println("FacilityDAO: Error removing building");
+            System.err.println(e.getMessage());
+        }
+        // remove building from the building table
         try {
             Statement st = DBHelper.getConnection().createStatement();
             String facilityRemovalQuery = "DELETE FROM Building WHERE BuildingId = '" + facilityId + "'";
