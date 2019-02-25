@@ -10,7 +10,7 @@ public class Inspection{
 
     public Inspection(){}
 
-    public String getBuildingId(){
+    public Building getBuildingId(){
         return buildingId;
     }
 

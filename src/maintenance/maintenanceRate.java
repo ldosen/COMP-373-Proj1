@@ -2,12 +2,12 @@ package maintenance;
 
 import java.*;
 import facility.Apartment;
-import maintenance.FacilityMaintenance;
+import maintenance.ScheduleMaintenance;
 
-public class maintenanceRate{
+public class MaintenanceRate{
     private int rate;
     private Apartment apartmentId;
-    private FacilityMaintenance maintenanceType;
+    private ScheduleMaintenance start, finish;
 
     public maintenanceRate(){}
 
@@ -25,5 +25,9 @@ public class maintenanceRate{
 
     public void setApartmentId(Apartment apartmentId){
         this.apartmentId = apartmentId;
+    }
+
+    public int calcMaintenance(int rate){
+        int totalCost = rate * (finish - start);
     }
 }
