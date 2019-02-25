@@ -4,6 +4,8 @@ import facility.*;
 import service.FacilityService;
 import service.RenterService;
 import renter.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class FacilityView {
 
@@ -31,6 +33,12 @@ public class FacilityView {
         facilityService.addFacility(building1);
 
         //remove facility two
-        facilityService.removeFacility(1001);
+        //facilityService.removeFacility(1001);
+
+        List<Integer> facilities = facilityService.listFacilities();
+        System.out.println("Facilities:");
+        for(Integer element : facilities){
+            System.out.println(element);
+        }
     }
 }

@@ -53,4 +53,28 @@ public class FacilityDAO {
         }
     }
 
+    public List<Integer> listFacilities(){
+
+        List<Integer> facilities = new ArrayList<Integer>();
+
+        try{
+            Statement st = DBHelper.getConnection().createStatement();
+            String getFacilitiesList = "SELECT* FROM Building";
+            ResultSet facilitiesResult = st.executeQuery(getFacilitiesList);
+
+
+            while (facilitiesResult.next()){
+                facilities.add(facilitiesResult.getInt("BuildingId"));
+            }
+            facilitiesResult.close();
+            st.close();
+            return facilities;
+
+        } catch (SQLException e){
+            System.err.println("FacilityDAO: error while retrieving facilities list");
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
 }
