@@ -54,7 +54,7 @@ public class FacilityDAO {
                 apartment.setMonthlyRent(apptRS.getInt("MonthlyRent"));
                 apartment.setStatus(apptRS.getString("Status"));
                 apartment.setCapacity(apptRS.getInt("Capacity"));
-                apartment.addTenant(renterDAO.getRenter(apptRS.getInt("RenterID")));
+                apartment.setRenterId(apptRS.getInt("RenterID"));
                 apartment.setBuildingId(apptRS.getInt("BuildingID"));
             }
             //close to manage resources
@@ -92,7 +92,7 @@ public class FacilityDAO {
                     con.close();
                 }
             } catch (SQLException ex){
-                System.err.println("CustomerDAO: Threw a SQLException saving the customer object");
+                System.err.println("FacilityDAO: Threw a SQLException saving the facility object");
                 System.err.println(ex.getMessage());
             }
         }
@@ -145,4 +145,37 @@ public class FacilityDAO {
         return null;
     }
 
+    public void addApartment(Apartment apartment){
+        Connection con = DBHelper.getConnection();
+        PreparedStatement appPst = null;
+        PreparedStatement bldgPst = null;
+
+        try{
+            String appStm = "INSERT INTO Apartment(ApartmentID, NumberOfRooms, MonthlyRent, Status, Capacity, RenterID, BuildingID) VALUES(?, ?, ?, ?, ?, ?, ?)";
+            appPst = con.prepareStatement(appStm);
+            appPst.setInt(1, apartment.getApartmentId());
+            appPst.setInt(2, apartment.getNumberOfRooms());
+            appPst.setInt(3, apartment.getMonthlyRent());
+            appPst.setString(4, apartment.getStatus());
+            appPst.setInt(5, apartment.getCapacity());
+            appPst.setInt(6, apartment.getRenterId());
+            appPst.setInt(7, apartment.getBuildingId());
+            appPst.executeUpdate();
+
+            // update corresponding building
+            String bldgStm = "UPDATE Building SET ApartmentID = ? WHERE BuildingID = ?";
+            bldgPst = con.prepareStatement(bldgStm);
+            bldgPst.setInt(1, apartment.getApartmentId());
+            bldgPst.setInt(2, apartment.getBuildingId());
+            bldgPst.executeUpdate();
+
+            appPst.close();
+            bldgPst.close();
+            con.close();
+
+            } catch (SQLException ex){
+                System.err.println("FacilityDAO: Threw a SQLException saving the Apartment object");
+                System.err.println(ex.getMessage());
+            }
+    }
 }

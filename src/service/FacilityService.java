@@ -61,4 +61,13 @@ public class FacilityService {
         }
         return -1;
     }
+
+    public void addApartment(Apartment apartment){
+        try{
+            facilityDAO.addApartment(apartment);
+        } catch(Exception e){
+            System.err.println("FacilityService: error when trying to add Apartment object");
+            System.err.println(e.getMessage());
+        }
+    }
 }

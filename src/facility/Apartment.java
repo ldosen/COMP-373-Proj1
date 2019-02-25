@@ -8,13 +8,23 @@ public class Apartment extends Building {
 
     private int apartmentId;
     private int numberOfRooms;
-    private double monthlyRent;
-    private List<Renter> tenants = new ArrayList<Renter>();
+    private int monthlyRent;
+    private int renterId;
     private String status;
     private int capacity;
     private int buildingId;
 
     public Apartment(){}
+
+    public Apartment(int apartmentId, int numberOfRooms, int monthlyRent, int renterId, String status, int capacity, int buildingId){
+        this.apartmentId = apartmentId;
+        this.numberOfRooms = numberOfRooms;
+        this.monthlyRent = monthlyRent;
+        this.renterId = renterId;
+        this.status = status;
+        this.capacity = capacity;
+        this.buildingId = buildingId;
+    }
 
     public int getApartmentId(){
         return apartmentId;
@@ -32,20 +42,20 @@ public class Apartment extends Building {
         this.numberOfRooms = numberOfRooms;
     }
 
-    public double getMonthlyRent(){
+    public int getMonthlyRent(){
         return monthlyRent;
     }
 
-    public void setMonthlyRent(double monthlyRent){
+    public void setMonthlyRent(int monthlyRent){
         this.monthlyRent = monthlyRent;
     }
 
-    public List<Renter> getTenants(){
-        return tenants;
+    public int getRenterId(){
+        return renterId;
     }
 
-    public void addTenant(Renter tenant){
-        tenants.add(tenant);
+    public void setRenterId(int renterId){
+        this.renterId = renterId;
     }
 
     public String getStatus(){
@@ -64,10 +74,6 @@ public class Apartment extends Building {
         return capacity;
     }
 
-    public void setTenants(int capacity){
-        this.capacity = capacity;
-    }
-
     public int getBuildingId(){
         return buildingId;
     }
@@ -79,7 +85,7 @@ public class Apartment extends Building {
     @Override
     public String toString(){
         String aptattributes = "Apartment ID:" + Integer.toString(apartmentId) + "\nNumber of Rooms:" +
-                Integer.toString(numberOfRooms) + "\nMonthly Rent:" + Double.toString(monthlyRent) + "\nCurrent Tenants:" + tenants.toString() +
+                Integer.toString(numberOfRooms) + "\nMonthly Rent:" + Integer.toString(monthlyRent) + "\nCurrent Tenant:" + renterId +
                 "\nStatus:" + status + "\nCapacity:" + capacity + "\nBuildingID:" + buildingId;
         return aptattributes;
     }

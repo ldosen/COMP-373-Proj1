@@ -49,5 +49,9 @@ public class FacilityView {
         // test requestCapacity
         int apartment1capacity = facilityService.requestCapacity(1);
         System.out.println("Apartment 1 capacity:\n" + apartment1capacity);
+
+        // test add ApartmentDetails
+        Apartment apartment1 = new Apartment(2, 1, 800, 113, "occupied", 1, 1001);
+        facilityService.addApartment(apartment1);
     }
 }
