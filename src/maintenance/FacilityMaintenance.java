@@ -2,6 +2,7 @@ package maintenance;
 
 import java.*;
 import maintenance.maintenanceRequest;
+import facility.Apartment;
 
 public class FacilityMaintenance {
     private Apartment status;
