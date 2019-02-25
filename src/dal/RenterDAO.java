@@ -19,10 +19,10 @@ public class RenterDAO {
         try {
             //Get Address From DB
             Statement st = DBHelper.getConnection().createStatement();
-            String selectCustomerQuery = "SELECT AddressID, StreetName, ApartmentNumber, City, State, Zip FROM Address WHERE AddressID = '" + addressId + "'";
+            String selectAddressQuery = "SELECT AddressID, StreetName, ApartmentNumber, City, State, Zip FROM Address WHERE AddressID = '" + addressId + "'";
 
-            ResultSet addrRS = st.executeQuery(selectCustomerQuery);
-            System.out.println("RenterDAO: *************** Query " + selectCustomerQuery);
+            ResultSet addrRS = st.executeQuery(selectAddressQuery);
+            System.out.println("RenterDAO: *************** Query " + selectAddressQuery);
 
             //Create new address object
             Address address = new Address();
@@ -112,5 +112,35 @@ public class RenterDAO {
             System.err.println("RenterDAO: Threw and SQLException while trying to delete address");
             System.err.println(e.getMessage());
         }
+    }
+
+    public Renter getRenter(int renterId){
+        try {
+            //Get Address From DB
+            Statement st = DBHelper.getConnection().createStatement();
+            String selectRenterQuery = "SELECT RenterID, LastName, FirstName, AddressID FROM Renter WHERE RenterID = '" + renterId + "'";
+
+            ResultSet renterRS = st.executeQuery(selectRenterQuery);
+            System.out.println("RenterDAO: *************** Query " + selectRenterQuery);
+
+            //Create new address object
+            Renter renter = new Renter();
+            while ( renterRS.next() ) {
+                renter.setRenterId(renterRS.getInt("RenterID"));
+                renter.setLastName(renterRS.getString("LastName"));
+                renter.setFirstName(renterRS.getString("FirstName"));
+                renter.setRentingAddress(getAddress(renterRS.getString("AddressID")));
+            }
+
+            //close to manage resources
+            renterRS.close();
+
+            return renter;
+        } catch (SQLException se) {
+            System.err.println("RenterDAO: Threw a SQLException retrieving the address object.");
+            System.err.println(se.getMessage());
+            se.printStackTrace();
+        }
+        return null;
     }
 }

@@ -12,6 +12,7 @@ public class Apartment extends Building {
     private List<Renter> tenants = new ArrayList<Renter>();
     private String status;
     private int capacity;
+    private int buildingId;
 
     public Apartment(){}
 
@@ -55,11 +56,31 @@ public class Apartment extends Building {
         this.status = status;
     }
 
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
+    }
+
     public int getCapacity(){
         return capacity;
     }
 
     public void setTenants(int capacity){
         this.capacity = capacity;
+    }
+
+    public int getBuildingId(){
+        return buildingId;
+    }
+
+    public void setBuildingId(int buildingId){
+        this.buildingId = buildingId;
+    }
+
+    @Override
+    public String toString(){
+        String aptattributes = "Apartment ID:" + Integer.toString(apartmentId) + "\nNumber of Rooms:" +
+                Integer.toString(numberOfRooms) + "\nMonthly Rent:" + Double.toString(monthlyRent) + "\nCurrent Tenants:" + tenants.toString() +
+                "\nStatus:" + status + "\nCapacity:" + capacity + "\nBuildingID:" + buildingId;
+        return aptattributes;
     }
 }
