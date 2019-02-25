@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c47e9461-3c42-457e-9bee-db0688bcafbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/dal/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/DBHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/FacilityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/FacilityDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/RenterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/RenterDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/facility/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facility/Apartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renter/Renter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renter/Renter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/FacilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/FacilityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FacilityView.java" afterDir="false" />
     </list>
@@ -28,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/facility/Apartment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -50,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/FacilityDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
+            <state relative-caret-position="357">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1848#1857#0" expanded="true" />
@@ -64,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/service/FacilityService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+              <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/FacilityView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/RenterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="135" column="29" lean-forward="true" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+            <state relative-caret-position="2312">
+              <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,11 +167,11 @@
         <option value="$PROJECT_DIR$/src/renter/Address.java" />
         <option value="$PROJECT_DIR$/src/dal/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/renter/Renter.java" />
+        <option value="$PROJECT_DIR$/src/facility/Apartment.java" />
         <option value="$PROJECT_DIR$/src/dal/RenterDAO.java" />
-        <option value="$PROJECT_DIR$/src/dal/FacilityDAO.java" />
         <option value="$PROJECT_DIR$/src/service/FacilityService.java" />
         <option value="$PROJECT_DIR$/src/view/FacilityView.java" />
-        <option value="$PROJECT_DIR$/src/facility/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/dal/FacilityDAO.java" />
       </list>
     </option>
   </component>
@@ -243,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551060991183" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551062444541" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/postgresql-42.2.5.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -297,12 +294,12 @@
       <workItem from="1550982564191" duration="3183000" />
       <workItem from="1550987237600" duration="1965000" />
       <workItem from="1550990510173" duration="1706000" />
-      <workItem from="1551030532879" duration="28137000" />
+      <workItem from="1551030532879" duration="29740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55911000" />
+    <option name="totallyTimeSpent" value="57514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -404,13 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renter/Renter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -418,47 +408,6 @@
           <folding>
             <element signature="e#196#197#0" expanded="true" />
             <element signature="e#227#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/RenterDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="135" column="29" lean-forward="true" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/FacilityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/FacilityView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/FacilityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1848#1857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,6 +432,54 @@
             <element signature="e#1490#1491#0" expanded="true" />
             <element signature="e#1541#1542#0" expanded="true" />
             <element signature="e#1586#1587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/RenterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/FacilityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/FacilityDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1848#1857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/FacilityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

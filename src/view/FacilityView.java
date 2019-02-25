@@ -32,10 +32,10 @@ public class FacilityView {
         building1.setAddress(address1);
         facilityService.addFacility(building1);
 
-        //remove facility two
-        //facilityService.removeFacility(1001);
+        // remove facility two
+        // facilityService.removeFacility(1001);
 
-        //list facilities
+        // list facilities
         List<Integer> facilities = facilityService.listFacilities();
         System.out.println("Facilities:");
         for(Integer element : facilities){
@@ -45,5 +45,9 @@ public class FacilityView {
         Apartment apartment = facilityService.getApartmentInformation(1000);
         String aptinfo = apartment.toString();
         System.out.println(aptinfo);
+
+        // test requestCapacity
+        int apartment1capacity = facilityService.requestCapacity(1);
+        System.out.println("Apartment 1 capacity:\n" + apartment1capacity);
     }
 }

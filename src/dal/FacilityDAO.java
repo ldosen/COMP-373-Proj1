@@ -15,6 +15,27 @@ public class FacilityDAO {
 
     public FacilityDAO(){}
 
+    public int getApartmentCapacity(int apartmentId){
+        try{
+            Statement st = DBHelper.getConnection().createStatement();
+            String selectCapacityQuery = "SELECT Capacity FROM Apartment WHERE ApartmentID ='" + apartmentId + "'";
+            ResultSet capacityResult = st.executeQuery(selectCapacityQuery);
+            int capacity = 0;
+            while (capacityResult.next() ){
+                capacity = capacityResult.getInt("Capacity");
+            }
+
+            st.close();
+            capacityResult.close();
+            return capacity;
+
+        } catch (SQLException e){
+            System.err.println("FacilityDAO: error when trying to get apartment capacity");
+            System.err.println(e.getMessage());
+        }
+        return -1;
+    }
+
     public Apartment getApartmentInformation(int buildingId){
         try {
             RenterDAO renterDAO = new RenterDAO();
@@ -38,6 +59,7 @@ public class FacilityDAO {
             }
             //close to manage resources
             apptRS.close();
+            st.close();
 
             return apartment;
         }

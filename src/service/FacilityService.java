@@ -50,4 +50,15 @@ public class FacilityService {
         }
         return null;
     }
+
+    public int requestCapacity(int apartmentId){
+        try{
+            int capacity = facilityDAO.getApartmentCapacity(apartmentId);
+            return capacity;
+        } catch (Exception e){
+            System.err.println("FacilityService: Error when getting capacity");
+            System.err.println(e.getMessage());
+        }
+        return -1;
+    }
 }

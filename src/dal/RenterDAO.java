@@ -134,6 +134,7 @@ public class RenterDAO {
 
             //close to manage resources
             renterRS.close();
+            st.close();
 
             return renter;
         } catch (SQLException se) {
