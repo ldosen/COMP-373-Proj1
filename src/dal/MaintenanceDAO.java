@@ -99,7 +99,7 @@ public class MaintenanceDAO {
             return maintenanceRequests;
 
         } catch (SQLException e){
-            System.err.println("FacilityDAO: error while retrieving maintenance requests list");
+            System.err.println("MaintenanceDAO: error while retrieving maintenance requests list");
             System.err.println(e.getMessage());
         }
         return null;
