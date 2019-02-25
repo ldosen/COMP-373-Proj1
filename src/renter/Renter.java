@@ -1,16 +1,16 @@
 package renter;
 
 public class Renter {
-    private String renterId;
+    private int renterId;
     private String lastName;
     private String firstName;
     private Address rentingAddress;
 
-    public String getRenterId() {
+    public int getRenterId() {
         return renterId;
     }
 
-    public void setRenterId(String renterId){
+    public void setRenterId(int renterId){
         this.renterId = renterId;
     }
 
@@ -26,7 +26,7 @@ public class Renter {
         return firstName;
     }
 
-    public void setFirstName(){
+    public void setFirstName(String firstName){
         this.firstName = firstName;
     }
 

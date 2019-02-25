@@ -35,10 +35,15 @@ public class FacilityView {
         //remove facility two
         //facilityService.removeFacility(1001);
 
+        //list facilities
         List<Integer> facilities = facilityService.listFacilities();
         System.out.println("Facilities:");
         for(Integer element : facilities){
             System.out.println(element);
         }
+
+        Apartment apartment = facilityService.getApartmentInformation(1000);
+        String aptinfo = apartment.toString();
+        System.out.println(aptinfo);
     }
 }

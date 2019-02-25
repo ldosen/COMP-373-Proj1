@@ -39,4 +39,15 @@ public class FacilityService {
         }
         return null;
     }
+
+    public Apartment getApartmentInformation(int buildingId){
+        try{
+            Apartment apartment = facilityDAO.getApartmentInformation(buildingId);
+            return apartment;
+        } catch (Exception e){
+            System.err.println("FacilityService: error retrieving apartment");
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
 }
