@@ -50,4 +50,24 @@ public class FacilityService {
         }
         return null;
     }
+
+    public int requestCapacity(int apartmentId){
+        try{
+            int capacity = facilityDAO.getApartmentCapacity(apartmentId);
+            return capacity;
+        } catch (Exception e){
+            System.err.println("FacilityService: Error when getting capacity");
+            System.err.println(e.getMessage());
+        }
+        return -1;
+    }
+
+    public void addApartment(Apartment apartment){
+        try{
+            facilityDAO.addApartment(apartment);
+        } catch(Exception e){
+            System.err.println("FacilityService: error when trying to add Apartment object");
+            System.err.println(e.getMessage());
+        }
+    }
 }
