@@ -1,9 +1,9 @@
 package view;
 
-import facility.*;
-import service.FacilityService;
-import service.RenterService;
-import renter.*;
+import domain.facility.*;
+import domain.service.FacilityService;
+import domain.service.RenterService;
+import domain.renter.*;
 import java.util.List;
 import java.util.ArrayList;
 

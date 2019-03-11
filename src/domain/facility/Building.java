@@ -1,10 +1,9 @@
-package facility;
+package domain.facility;
 
-import renter.Address;
+import domain.renter.Address;
 
 public class Building {
     private int buildingId;
-    private Apartment apartmentDetails;
     private Address address;
 
     public Building(){}
@@ -19,14 +18,6 @@ public class Building {
 
     public void setFacilityId(int buildingId) {
         this.buildingId = buildingId;
-    }
-
-    public Apartment getApartmentDetails(){
-        return apartmentDetails;
-    }
-
-    public void setApartmentDetails(Apartment apartmentDetails){
-        this.apartmentDetails = apartmentDetails;
     }
 
     public Address getAddress() {

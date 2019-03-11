@@ -1,27 +1,23 @@
-package facility;
+package domain.facility;
 
-import java.util.List;
-import java.util.ArrayList;
-import renter.Renter;
-
-public class Apartment extends Building {
+public class Apartment {
 
     private int apartmentId;
     private int numberOfRooms;
     private int monthlyRent;
     private int renterId;
-    private String status;
+    private String occupationStatus;
     private int capacity;
     private int buildingId;
 
     public Apartment(){}
 
-    public Apartment(int apartmentId, int numberOfRooms, int monthlyRent, int renterId, String status, int capacity, int buildingId){
+    public Apartment(int apartmentId, int numberOfRooms, int monthlyRent, int renterId, String occupationStatus, int capacity, int buildingId){
         this.apartmentId = apartmentId;
         this.numberOfRooms = numberOfRooms;
         this.monthlyRent = monthlyRent;
         this.renterId = renterId;
-        this.status = status;
+        this.occupationStatus = occupationStatus;
         this.capacity = capacity;
         this.buildingId = buildingId;
     }
@@ -58,12 +54,12 @@ public class Apartment extends Building {
         this.renterId = renterId;
     }
 
-    public String getStatus(){
-        return status;
+    public String getOccupationStatus(){
+        return occupationStatus;
     }
 
-    public void setStatus(String status){
-        this.status = status;
+    public void setOccupationStatus(String occupationStatus){
+        this.occupationStatus = occupationStatus;
     }
 
     public void setCapacity(int capacity){
@@ -86,7 +82,7 @@ public class Apartment extends Building {
     public String toString(){
         String aptattributes = "Apartment ID:" + Integer.toString(apartmentId) + "\nNumber of Rooms:" +
                 Integer.toString(numberOfRooms) + "\nMonthly Rent:" + Integer.toString(monthlyRent) + "\nCurrent Tenant:" + renterId +
-                "\nStatus:" + status + "\nCapacity:" + capacity + "\nBuildingID:" + buildingId;
+                "\nStatus:" + occupationStatus + "\nCapacity:" + capacity + "\nBuildingID:" + buildingId;
         return aptattributes;
     }
 }

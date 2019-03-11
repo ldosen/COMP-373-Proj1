@@ -1,9 +1,9 @@
-package service;
+package domain.service;
 
 import dal.FacilityDAO;
-import facility.*;
+import domain.facility.*;
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
-import renter.Address;
+import domain.renter.Address;
 
 import java.util.List;
 
