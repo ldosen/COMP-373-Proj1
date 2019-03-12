@@ -4,19 +4,13 @@
     <list default="true" id="c47e9461-3c42-457e-9bee-db0688bcafbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/MaintenanceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/MaintenanceDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/facility/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/facility/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/facility/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/facility/Apartment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/inspection/Inspection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/inspection/Inspection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/service/MaintenanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/service/MaintenanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/assignFacilityToUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/assignFacilityToUse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/calcUsageRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/calcUsageRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/isInUseDuringInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/isInUseDuringInterval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/listActualUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/listActualUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/listInspections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/listInspections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usage/vacateFacility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usage/vacateFacility.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,113 +34,91 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/service/RenterService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/domain/inspection/Inspection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/assignFacilityToUse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/calcUsageRate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/facility/Apartment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/facility/Building.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/isInUseDuringInterval.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/listActualUsage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/listInspections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/usage/vacateFacility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/domain/facility/Building.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/domain/service/MaintenanceService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="691">
+                  <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/domain/facility/Apartment.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#2136#2137#0" expanded="true" />
+                    <element signature="e#2172#2173#0" expanded="true" />
+                    <element signature="e#2227#2228#0" expanded="true" />
+                    <element signature="e#2277#2278#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/domain/service/FacilityService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="918">
+                  <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/dal/MaintenanceDAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1643">
+                  <caret line="167" column="20" lean-forward="true" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -182,10 +154,7 @@
         <option value="$PROJECT_DIR$/src/domain/service/FacilityService.java" />
         <option value="$PROJECT_DIR$/src/dal/FacilityDAO.java" />
         <option value="$PROJECT_DIR$/src/dal/RenterDAO.java" />
-        <option value="$PROJECT_DIR$/src/domain/facility/Apartment.java" />
-        <option value="$PROJECT_DIR$/src/dal/MaintenanceDAO.java" />
         <option value="$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java" />
-        <option value="$PROJECT_DIR$/src/domain/service/MaintenanceService.java" />
         <option value="$PROJECT_DIR$/src/domain/usage/assignFacilityToUse.java" />
         <option value="$PROJECT_DIR$/src/domain/usage/calcUsageRate.java" />
         <option value="$PROJECT_DIR$/src/domain/usage/isInUseDuringInterval.java" />
@@ -194,9 +163,14 @@
         <option value="$PROJECT_DIR$/src/domain/usage/vacateFacility.java" />
         <option value="$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java" />
         <option value="$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java" />
-        <option value="$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java" />
-        <option value="$PROJECT_DIR$/src/domain/inspection/Inspection.java" />
         <option value="$PROJECT_DIR$/src/domain/facility/Building.java" />
+        <option value="$PROJECT_DIR$/src/domain/inspection/Inspection.java" />
+        <option value="$PROJECT_DIR$/src/domain/maintenance/Problem.java" />
+        <option value="$PROJECT_DIR$/src/domain/maintenance/MaintenanceVisit.java" />
+        <option value="$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java" />
+        <option value="$PROJECT_DIR$/src/domain/facility/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/dal/MaintenanceDAO.java" />
+        <option value="$PROJECT_DIR$/src/domain/service/MaintenanceService.java" />
       </list>
     </option>
   </component>
@@ -264,6 +238,13 @@
               <item name="COMP-373-Proj1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="renter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP-373-Proj1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP-373-Proj1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,8 +269,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552414856220" />
-    <property name="last_opened_file_path" value="F:/BookStore" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552424955712" />
+    <property name="last_opened_file_path" value="F:/Comp373InClassAssignment" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -345,12 +326,12 @@
       <workItem from="1551030532879" duration="34098000" />
       <workItem from="1552342341567" duration="3220000" />
       <workItem from="1552348127387" duration="9000" />
-      <workItem from="1552410797838" duration="4014000" />
+      <workItem from="1552410797838" duration="13834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69115000" />
+    <option name="totallyTimeSpent" value="78935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -441,47 +422,10 @@
     <entry file="file://$PROJECT_DIR$/src/service/RenterService.java" />
     <entry file="file://$PROJECT_DIR$/src/renter/Address.java" />
     <entry file="file://$PROJECT_DIR$/src/renter/Renter.java" />
-    <entry file="file://$PROJECT_DIR$/src/dal/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/renter/Renter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/RenterDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/FacilityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/service/FacilityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -492,75 +436,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#230#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/FacilityView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/service/MaintenanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="72" lean-forward="true" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/MaintenanceDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -619,35 +498,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/facility/Apartment.java">
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/scheduleMaintenance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="408">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/facility/Building.java">
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/maintenanceRate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/FacilityMaintenance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/inspection/Inspection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
             <element signature="e#535#536#0" expanded="true" />
             <element signature="e#574#575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/RenterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/MaintenanceVisit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/facility/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding>
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2277#2278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/facility/Building.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/FacilityDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/maintenance/MaintenanceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/service/FacilityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/MaintenanceDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1643">
+          <caret line="167" column="20" lean-forward="true" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/service/MaintenanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

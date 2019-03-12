@@ -1,5 +1,10 @@
 package domain.facility;
 
+import domain.maintenance.MaintenanceRequest;
+
+import java.util.List;
+import java.util.ArrayList;
+
 public class Apartment {
 
     private int apartmentId;
@@ -9,6 +14,8 @@ public class Apartment {
     private String occupationStatus;
     private int capacity;
     private int buildingId;
+    private int daysInhabited;
+    private List<MaintenanceRequest> maintenanceRequests = new ArrayList<>();
 
     public Apartment(){}
 
@@ -76,6 +83,22 @@ public class Apartment {
 
     public void setBuildingId(int buildingId){
         this.buildingId = buildingId;
+    }
+
+    public int getDaysInhabited() {
+        return daysInhabited;
+    }
+
+    public void setDaysInhabited(int daysInhabited) {
+        this.daysInhabited = daysInhabited;
+    }
+
+    public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests){
+        this.maintenanceRequests = maintenanceRequests;
+    }
+
+    public void addMaintenanceRequest(MaintenanceRequest maintenanceRequest){
+        maintenanceRequests.add(maintenanceRequest);
     }
 
     @Override

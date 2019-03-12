@@ -8,8 +8,17 @@ public class Inspection{
 
     private String typeOfInspection;
     private String inspectionDetail;
+    private String inspectionDate;
 
     public Inspection(){}
+
+    public String getInspectionDate() {
+        return inspectionDate;
+    }
+
+    public void setInspectionDate(String inspectionDate) {
+        this.inspectionDate = inspectionDate;
+    }
 
     public String getTypeOfInspection(){
         return typeOfInspection;
