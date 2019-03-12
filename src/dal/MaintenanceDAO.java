@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import maintenance.*;
+import domain.maintenance.*;
 
 public class MaintenanceDAO {
 

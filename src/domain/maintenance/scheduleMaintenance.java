@@ -1,7 +1,7 @@
-package maintenance;
+package domain.maintenance;
+import java.time.LocalDateTime;
 
-import java.*;
-import maintenance.FacilityMaintenance;
+import domain.maintenance.FacilityMaintenance;
 
 public class scheduleMaintenance {
     private LocalDateTime start;

@@ -1,6 +1,6 @@
-package usage;
+package domain.usage;
 
-import facility.Apartment;
+import domain.facility.Apartment;
 
 public class isInUseDuringInterval{
     private int count = 0;
@@ -9,7 +9,7 @@ public class isInUseDuringInterval{
     private Apartment apartmentId;
     
 
-    public isInUseDuringInterval();
+    public isInUseDuringInterval(){}
 
     public Apartment getApartmentId(){
         return apartmentId;

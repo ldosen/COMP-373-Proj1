@@ -1,7 +1,7 @@
-package service;
+package domain.service;
 
 import dal.MaintenanceDAO;
-import maintenance.*;
+import domain.maintenance.*;
 
 import java.util.List;
 

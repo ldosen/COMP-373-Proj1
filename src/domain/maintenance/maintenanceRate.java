@@ -1,13 +1,12 @@
-package maintenance;
+package domain.maintenance;
 
 import java.*;
-import facility.Apartment;
-import maintenance.ScheduleMaintenance;
+import domain.facility.Apartment;
 
 public class MaintenanceRate{
     private int rate;
-    private Apartment apartmentId;
-    private ScheduleMaintenance start, finish;
+    private int apartmentId;
+    private scheduleMaintenance start, finish;
 
     public maintenanceRate(){}
 
@@ -19,11 +18,11 @@ public class MaintenanceRate{
         this.rate = rate;
     }
 
-    public Apartment getApartmentId(){
+    public int getApartmentId(){
         return apartmentId;
     }
 
-    public void setApartmentId(Apartment apartmentId){
+    public void setApartmentId(int apartmentId){
         this.apartmentId = apartmentId;
     }
 

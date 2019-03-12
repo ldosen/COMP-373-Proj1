@@ -1,25 +1,15 @@
-package inspection;
+package domain.inspection;
 
-import facility.Building;
+import domain.facility.Building;
 import java.util.List;
 import java.util.ArrayList;
 
 public class Inspection{
 
-    private int buildingId;
     private String typeOfInspection;
     private String inspectionDetail;
-    private List<InspectionList> inspectionList = new ArrayList<InspectionList>();
 
     public Inspection(){}
-
-    public int getBuildingId(){
-        return buildingId;
-    }
-
-    public void setBuildingId(int buildingId){
-        this.buildingId = buildingId;
-    }
 
     public String getTypeOfInspection(){
         return typeOfInspection;
@@ -37,11 +27,4 @@ public class Inspection{
         this.inspectionDetail = inspectionDetail;
     }
 
-    public List<InspectionList> getRequests(){
-        return inspectionList;
-    }
-
-    public void addRequest(Inspection inspectionDetail){
-        inspectionList.add(inspectionDetail);
-    }
 }

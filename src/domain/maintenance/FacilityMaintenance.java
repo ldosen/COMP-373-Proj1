@@ -1,8 +1,9 @@
-package maintenance;
+package domain.maintenance;
 
-import java.*;
-import maintenance.maintenanceRequest;
-import facility.Apartment;
+import java.util.List;
+import java.util.ArrayList;
+import domain.maintenance.MaintenanceRequest;
+import domain.facility.Apartment;
 
 public class FacilityMaintenance {
     private Apartment status;
