@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import facility.*;
-import renter.*;
-import service.RenterService;
+import domain.facility.*;
+import domain.renter.*;
+import domain.service.RenterService;
 
 public class FacilityDAO {
 
@@ -52,7 +52,7 @@ public class FacilityDAO {
                 apartment.setApartmentId(apptRS.getInt("ApartmentID"));
                 apartment.setNumberOfRooms(apptRS.getInt("NumberOfRooms"));
                 apartment.setMonthlyRent(apptRS.getInt("MonthlyRent"));
-                apartment.setStatus(apptRS.getString("Status"));
+                apartment.setOccupationStatus(apptRS.getString("Status"));
                 apartment.setCapacity(apptRS.getInt("Capacity"));
                 apartment.setRenterId(apptRS.getInt("RenterID"));
                 apartment.setBuildingId(apptRS.getInt("BuildingID"));
@@ -156,18 +156,11 @@ public class FacilityDAO {
             appPst.setInt(1, apartment.getApartmentId());
             appPst.setInt(2, apartment.getNumberOfRooms());
             appPst.setInt(3, apartment.getMonthlyRent());
-            appPst.setString(4, apartment.getStatus());
+            appPst.setString(4, apartment.getOccupationStatus());
             appPst.setInt(5, apartment.getCapacity());
             appPst.setInt(6, apartment.getRenterId());
             appPst.setInt(7, apartment.getBuildingId());
             appPst.executeUpdate();
-
-            // update corresponding building
-            String bldgStm = "UPDATE Building SET ApartmentID = ? WHERE BuildingID = ?";
-            bldgPst = con.prepareStatement(bldgStm);
-            bldgPst.setInt(1, apartment.getApartmentId());
-            bldgPst.setInt(2, apartment.getBuildingId());
-            bldgPst.executeUpdate();
 
             appPst.close();
             bldgPst.close();

@@ -1,4 +1,4 @@
-package usage;
+package domain.usage;
 
 import inspection.Inspection;
 

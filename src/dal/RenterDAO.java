@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import facility.*;
-import renter.*;
+import domain.facility.*;
+import domain.renter.*;
 
 public class RenterDAO {
 
@@ -116,7 +116,7 @@ public class RenterDAO {
 
     public Renter getRenter(int renterId){
         try {
-            //Get Address From DB
+            //Get renter id From DB
             Statement st = DBHelper.getConnection().createStatement();
             String selectRenterQuery = "SELECT RenterID, LastName, FirstName, AddressID FROM Renter WHERE RenterID = '" + renterId + "'";
 

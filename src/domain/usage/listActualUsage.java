@@ -1,6 +1,6 @@
-package usage;
+package domain.usage;
 
-import usage.isInUseDuringInterval;
+import domain.usage.isInUseDuringInterval;
 
 public class listActualUsage(){
     private String checkVacancy;

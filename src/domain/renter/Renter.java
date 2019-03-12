@@ -1,4 +1,4 @@
-package renter;
+package domain.renter;
 
 public class Renter {
     private int renterId;

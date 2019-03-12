@@ -1,4 +1,4 @@
-package renter;
+package domain.renter;
 
 public class Address {
     private String addressID;

@@ -1,6 +1,6 @@
-package service;
+package domain.service;
 
-import renter.*;
+import domain.renter.*;
 import dal.RenterDAO;
 
 public class RenterService {

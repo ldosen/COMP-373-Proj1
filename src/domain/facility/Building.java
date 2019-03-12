@@ -1,11 +1,14 @@
-package facility;
+package domain.facility;
 
-import renter.Address;
+import domain.inspection.Inspection;
+import domain.renter.Address;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Building {
     private int buildingId;
-    private Apartment apartmentDetails;
     private Address address;
+    private List<Inspection> inspections = new ArrayList<>();
 
     public Building(){}
 
@@ -21,19 +24,19 @@ public class Building {
         this.buildingId = buildingId;
     }
 
-    public Apartment getApartmentDetails(){
-        return apartmentDetails;
-    }
-
-    public void setApartmentDetails(Apartment apartmentDetails){
-        this.apartmentDetails = apartmentDetails;
-    }
-
     public Address getAddress() {
         return address;
     }
 
     public void setAddress(Address address){
         this.address = address;
+    }
+
+    public void setInspections(List<Inspection> inspections){
+        this.inspections = inspections;
+    }
+
+    public void addInspection(Inspection inspection){
+        inspections.add(inspection);
     }
 }

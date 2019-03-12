@@ -1,4 +1,4 @@
-package usage;
+package domain.usage;
 
 public class calcUsageRate{
     public calcUsageRate();

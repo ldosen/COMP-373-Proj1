@@ -1,6 +1,6 @@
-package usage;
+package domain.usage;
 
-import facility.Apartment;
+import domain.facility.Apartment;
 
 public class assignFacilityToUse(){
     private int apartmentId;
