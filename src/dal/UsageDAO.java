@@ -8,164 +8,115 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import domain.facility.Apartment;
 import domain.usage.*;
+import domain.inspection.*;
 
 public class UsageDAO {
 
     public UsageDAO(){}
 
-    public void isInUseDuringInterval(){
-
-    }
-
-    public void makeFacilityMaintenanceRequest(MaintenanceRequest maintenanceRequest, int apartmentId){
-        Connection con = DBHelper.getConnection();
-        PreparedStatement mrPst = null;
-
+    public boolean isInUseDuringInterval(){
         try{
-            String mrStm = "INSERT INTO MaintenanceRequest(RequestID, MaintenanceDescription, ApartmentID) VALIUES(?, ?, ?)";
-            mrPst = con.prepareStatement(mrStm);
-            mrPst.setInt(1, maintenanceRequest.getRequestd());
-            mrPst.setString(2, maintenanceRequest.getMaintenanceDescription());
-            mrPst.setInt(3, apartmentId);
+            Statement state = DBHelper.getConnection().createStatement();
+            String selectIsInUseQuery = "SELECT NumOfPeople FROM Use WHERE NumOfPeople = NULL ";
+            ResultSet isInUseResult = state.executeQuery(selectIsInUseQuery);
 
-            mrPst.close();
-            con.close();
-        } catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw an exception while making new maintenance request");
-            System.err.println(e.getMessage());
-        }
-    }
-
-    public void scheduleMaintenance(MaintenanceVisit maintenanceVisit, int apartmentId, int problemId){
-        Connection con = DBHelper.getConnection();
-        PreparedStatement mvPst = null;
-
-        try{
-            String mvStm = "INSERT INTO MaintenanceVisit(VisitID, ApartmentID, ProblemID) VALUES(?, ?, ?)";
-            mvPst = con.prepareStatement(mvStm);
-            mvPst.setInt(1, maintenanceVisit.getVisitId());
-            mvPst.setInt(2, apartmentId);
-            mvPst.setInt(3, problemId);
-
-            mvPst.close();
-            con.close();
-
-        }catch (SQLException e){
-            System.err.println("MaintenanceDAO: Threw an exception while scheduling a new maintenance visit");
-            System.err.println(e.getMessage());
-        }
-    }
-
-    public List<Float> calcMaintenanceCostForFacility(int apartmentId){
-        try{
-            Statement st = DBHelper.getConnection().createStatement();
-            String selectProblemsQuery = "SELECT CostToFix FROM Problem WHERE ApartmentID ='" + apartmentId + "'";
-            ResultSet problemsResult = st.executeQuery(selectProblemsQuery);
-
-            // add costs to list to return to the serviceworker
-            List<Float> problemsCosts = new ArrayList<>();
-            while(problemsResult.next()){
-                problemsCosts.add(problemsResult.getFloat("CostToFix"));
+            boolean empty = true;
+            while(isInUseResult.next()){
+                if(selectIsInUseQuery.equals(null)){
+                    empty = false;
+                }
             }
 
-            st.close();
-            problemsResult.close();
-            return problemsCosts;
+            state.close();
+            isInUseResult.close();
+            return empty;
 
         }catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw an exception while calculating facility maintenance cost");
+            System.err.println("UsageDAO: Threw an exception while calculating the facility usage rate");
+            System.err.println(e.getMessage());
+        }
+        return true;
+
+    }
+
+    public  List<Float> calcUsageRate(int apartmentId){
+        try{
+            Statement state = DBHelper.getConnection().createStatement();
+            String selectUseQuery = "SELECT UseCost FROM Use WHERE ApartmentID ='" + apartmentId + "'";
+            ResultSet useResult = state.executeQuery(selectUseQuery);
+
+            List<Float> usageCosts = new ArrayList<>();
+            while(useResult.next()){
+                usageCosts.add(useResult.getFloat("UsageCost"));
+            }
+
+            state.close();
+            useResult.close();
+            return usageCosts;
+
+        }catch (SQLException e){
+            System.err.println("UsageDAO: Threw an exception while calculating the facility usage rate");
+            System.err.println(e.getMessage());
+        }
+        return null;
+
+    }
+
+    public List<String> listActualUsage(int apartmentId){
+        try{
+            Statement state = DBHelper.getConnection().createStatement();
+            String selectActualUsageQuery = "SELECT NumOfPeople FROM Use WHERE ApartmentID ='" + apartmentId + "'";
+            ResultSet actualUsageResult = state.executeQuery(selectActualUsageQuery);
+
+            List<String> actualUsageList = new ArrayList<>();
+            while(actualUsageResult.next()){
+                actualUsageList.add(actualUsageResult.getString("ActualUsage"));
+            }
+
+            state.close();
+            actualUsageResult.close();
+            return actualUsageList;
+        }catch (SQLException e){
+            System.err.println("Usage DAO: Threw an exception while listing actual usage");
             System.err.println(e.getMessage());
         }
         return null;
     }
 
-    public List<String> listFacilityProblems(int apartmentId){
+    public List<String> listInspections(int apartmentId){
         try{
-            Statement st = DBHelper.getConnection().createStatement();
-            String selectProblemsQuery = "SELECT ProblemDescription FROM Problem WHERE ApartmentID ='" + apartmentId + "'";
-            ResultSet problemsResult = st.executeQuery(selectProblemsQuery);
+            Statement state = DBHelper.getConnection().createStatement();
+            String selectInspectionsQuery = "SELECT InspectionDetail FROM Inspection WHERE ApartmentID ='" + apartmentId + "'";
+            ResultSet inspectionsResult = state.executeQuery(selectInspectionsQuery);
 
-            // add problem descriptions to list which will be returned to the serviceworker
-            List<String> problemsList = new ArrayList<>();
-            while(problemsResult.next()){
-                problemsList.add(problemsResult.getString("ProblemDescription"));
+            List<String> inspections = new ArrayList<>();
+            while (inspectionsResult.next()){
+                inspections.add(inspectionsResult.getString("InspectionID"));
             }
 
-            st.close();
-            problemsResult.close();
-            return problemsList;
+            state.close();
+            inspectionsResult.close();
+            return inspections;
         }catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw an exception while listing facility problems");
+            System.err.println("UsageDAO: Threw exception while trying to list inspections");
             System.err.println(e.getMessage());
         }
         return null;
     }
 
-    public List<Float> calcDownTimeForFacility(int apartmentId){
-        try{
-            Statement st = DBHelper.getConnection().createStatement();
-            String selectFixTimeQuery = "SELECT TimeToFix FROM Problem WHERE ApartmentID ='" + apartmentId + "'";
-            ResultSet fixTimeResult = st.executeQuery(selectFixTimeQuery);
+    public void vacateFacility(){
 
-            // add times to list to return to the serviceworker
-            List<Float> problemsFixTimes = new ArrayList<>();
-            while(fixTimeResult.next()){
-                problemsFixTimes.add(fixTimeResult.getFloat("TimeToFix"));
-            }
-
-            st.close();
-            fixTimeResult.close();
-            return problemsFixTimes;
-
-        }catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw an exception while calculating facility maintenance cost");
+        try {
+            Statement state = DBHelper.getConnection().createStatement();
+            String vacateFacilityQuery = "UPDATE Use SET NumOfPeople = NULL";
+            state.execute(vacateFacilityQuery);
+            state.close();
+        } catch ( SQLException e){
+            System.err.println("UsageDAO: Error vacating facility");
             System.err.println(e.getMessage());
         }
-        return null;
     }
 
-    public List<Integer> listMaintenanceRequests(int apartmentId){
-        try{
-            Statement st = DBHelper.getConnection().createStatement();
-            String selectMaintenanceReqsQuery = "SELECT RequestID FROM MaintenanceRequest WHERE ApartmentID ='" + apartmentId + "'";
-            ResultSet maintenanceReqsResult = st.executeQuery(selectMaintenanceReqsQuery);
-
-            // add maintenance requests to return to the service worker
-            List<Integer> maintenanceRequests = new ArrayList<>();
-            while (maintenanceReqsResult.next()){
-                maintenanceRequests.add(maintenanceReqsResult.getInt("RequestID"));
-            }
-
-            st.close();
-            maintenanceReqsResult.close();
-            return maintenanceRequests;
-        }catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw exception while trying to list maintenance requests");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }
-
-    public List<Integer> listMaintenance(int apartmentId){
-        try{
-            Statement st = DBHelper.getConnection().createStatement();
-            String selectMaintenancePerformedQuery = "SELECT VisitID FROM MaintenanceVisit WHERE ApartmentID ='" + apartmentId + "'";
-            ResultSet maintenancePerformedResult = st.executeQuery(selectMaintenancePerformedQuery);
-
-            // add maintenance requests to return to the service worker
-            List<Integer> maintenancePerformed = new ArrayList<>();
-            while (maintenancePerformedResult.next()){
-                maintenancePerformed.add(maintenancePerformedResult.getInt("VisitID"));
-            }
-
-            st.close();
-            maintenancePerformedResult.close();
-            return maintenancePerformed;
-        }catch (SQLException e){
-            System.err.println("Maintenance DAO: Threw exception while trying to list maintenance performed");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }
 }

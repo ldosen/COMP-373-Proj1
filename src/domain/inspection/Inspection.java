@@ -1,6 +1,6 @@
 package domain.inspection;
 
-import domain.facility.Building;
+import domain.facility.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -12,6 +12,11 @@ public class Inspection{
 
     public Inspection(){}
 
+    public Inspection(String typeOfInspection, String inspectionDetail, String inspectionDate,Apartment apartmentId ){
+        this.typeOfInspection = typeOfInspection;
+        this.inspectionDetail = inspectionDetail;
+        this.inspectionDate = inspectionDate;
+    }
     public String getInspectionDate() {
         return inspectionDate;
     }
